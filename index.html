@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Каталог товарів - Лаб 7</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MyStore</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Додому (Home)</a>
+                <a class="nav-link" href="#" onclick="loadCatalog(event)">Каталог (Catalog)</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5" id="main-content">
+        <div class="p-5 mb-4 bg-light rounded-3 text-center">
+            <h1 class="display-5 fw-bold">Вітаємо в MyStore!</h1>
+            <p class="col-md-8 mx-auto fs-4">Це демонстрація роботи Ajax. Натисніть "Каталог" у верхньому меню, щоб завантажити категорії без перезавантаження сторінки.</p>
+            <button class="btn btn-primary btn-lg" onclick="loadCatalog(event)">Відкрити каталог</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
