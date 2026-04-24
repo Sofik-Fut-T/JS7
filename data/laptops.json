@@ -1,1 +1,37 @@
-
+{
+  "categoryName": "Ноутбуки",
+  "items": [
+    {
+      "id": 101,
+      "name": "UltraBook Pro",
+      "shortname": "ub-pro",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Чудовий вибір для офісу.",
+      "price": "35 000 UAH",
+      "image": "https://placehold.co/200x200/5b5bf0/white?text=Laptop+1"
+    },
+    {
+      "id": 102,
+      "name": "Gaming Beast X",
+      "shortname": "gb-x",
+      "description": "Lorem ipsum dolor sit amet. Відеокарта RTX 4070.",
+      "price": "60 000 UAH",
+      "image": "https://placehold.co/200x200/a855f7/white?text=Laptop+2"
+    },
+    {
+      "id": 103,
+      "name": "Student Basic",
+      "shortname": "sb-1",
+      "description": "Lorem ipsum dolor sit amet. Бюджетний варіант.",
+      "price": "15 000 UAH",
+      "image": "https://placehold.co/200x200/22d3a0/white?text=Laptop+3"
+    },
+    {
+      "id": 104,
+      "name": "CodeMaster 15",
+      "shortname": "cm-15",
+      "description": "Lorem ipsum dolor sit amet. Ідеально для програмістів.",
+      "price": "42 000 UAH",
+      "image": "https://placehold.co/200x200/f5c542/black?text=Laptop+4"
+    }
+  ]
+}
