@@ -1,31 +1,33 @@
-
 // Функція завантаження каталогу категорій
 function loadCatalog(event) {
-    if (event) event.preventDefault(); // Запобігаємо стандартному переходу за посиланням
+    if (event) event.preventDefault();
 
-    // Робимо Ajax-запит до файлу categories.json
     fetch('data/categories.json')
-        .then(response => response.json()) // Перетворюємо відповідь у JS-об'єкт
+        .then(response => response.json())
         .then(categories => {
-            let html = '<h2 class="mb-4">Каталог товарів</h2><div class="list-group">';
+            // Додав кнопку "На головну" та прибрав стандартні кольори
+            let html = `
+                <div class="w-100 d-flex justify-content-start mb-3">
+                    <a href="index.html" class="btn hero-btn btn-sm">🏠 На головну</a>
+                </div>
+                <h2>Каталог товарів</h2>
+                <div class="list-group">`;
             
-            // Проходимо по кожній категорії і створюємо кнопку
             categories.forEach(category => {
+                // Прибрав text-muted, бо він робив текст сірим і нечитабельним на темному
                 html += `
                     <a href="#" class="list-group-item list-group-item-action" onclick="loadCategoryItems('${category.shortname}', event)">
                         <h5 class="mb-1">${category.name}</h5>
-                        <small class="text-muted">${category.notes}</small>
+                        <p>${category.notes}</p>
                     </a>`;
             });
 
-            // Додаємо кнопку "Specials" (Випадкова категорія)
             html += `
-                <a href="#" class="list-group-item list-group-item-action list-group-item-warning mt-3 fw-bold" onclick="loadSpecials(event)">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-warning mt-3" onclick="loadSpecials(event)">
                     ⭐ Specials (Випадкова категорія)
                 </a>
             </div>`;
 
-            // Вставляємо згенерований HTML у наш головний контейнер
             document.getElementById('main-content').innerHTML = html;
         })
         .catch(error => console.error('Помилка завантаження каталогу:', error));
@@ -35,28 +37,28 @@ function loadCatalog(event) {
 function loadCategoryItems(shortname, event) {
     if (event) event.preventDefault();
 
-    // Робимо запит до відповідного JSON-файлу (наприклад, data/laptops.json)
     fetch(`data/${shortname}.json`)
         .then(response => response.json())
         .then(data => {
+            // Стилізував кнопку повернення та заголовок категорії
             let html = `
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2>Категорія: <span class="text-primary">${data.categoryName}</span></h2>
-                    <button class="btn btn-secondary" onclick="loadCatalog(event)">⬅ Повернутися до каталогу</button>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 w-100">
+                    <h2 class="text-light mb-3 mb-md-0">Категорія: <span style="color: #00c6ff;">${data.categoryName}</span></h2>
+                    <button class="btn hero-btn" onclick="loadCatalog(event)">⬅ Повернутися до каталогу</button>
                 </div>
-                <div class="row">
+                <div class="row w-100">
             `;
 
-            // Генеруємо картки для кожного товару
             data.items.forEach(item => {
+                // Замінив h6 text-success на div class="price", щоб працював наш CSS
                 html += `
                     <div class="col-md-4 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card shadow-sm product-card">
                             <img src="${item.image}" class="card-img-top" alt="${item.name}">
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">${item.name}</h5>
-                                <p class="card-text">${item.description}</p>
-                                <h6 class="text-success">${item.price}</h6>
+                                <p class="card-text flex-grow-1">${item.description}</p>
+                                <div class="price">${item.price}</div>
                             </div>
                         </div>
                     </div>`;
@@ -75,11 +77,8 @@ function loadSpecials(event) {
     fetch('data/categories.json')
         .then(response => response.json())
         .then(categories => {
-            // Генеруємо випадковий індекс від 0 до кількості категорій
             const randomIndex = Math.floor(Math.random() * categories.length);
             const randomCategory = categories[randomIndex].shortname;
-            
-            // Викликаємо функцію завантаження товарів з отриманим shortname
             loadCategoryItems(randomCategory);
         })
         .catch(error => console.error('Помилка завантаження Specials:', error));
