@@ -1,0 +1,260 @@
+/* --- ГЛОБАЛЬНІ СТИЛІ (Темна тема) --- */
+body {
+    background-color: #000; /* Фон всього сайту тепер чорний */
+    color: #fff; /* Текст за замовчуванням білий */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* 1. Навігація з ефектом скла */
+.navbar {
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Напівпрозорий чорний */
+    border-bottom: 1px solid rgba(138, 43, 226, 0.2); /* Ледь помітна фіолетова смужка */
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+/* 2. Головна секція з новою картинкою (Hero Section) */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 56px); /* На всю висоту екрана, мінус висота меню */
+    
+    /* Шлях до вашої картинки. Переконайтеся, що він правильний! */
+    background-image: url('../images/laptop-hero.jpg'); /* Замініть на вашу картинку */
+    
+    background-size: cover; /* Розтягнути на всю площу */
+    background-position: center; /* Центрувати */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end; /* Переміщуємо кнопку вниз */
+    padding-bottom: 10vh; /* Відступ від низу екрана */
+}
+
+/* 3. Кнопка "Відкрити каталог" (перероблена під нову тему) */
+.hero-btn {
+    background: transparent !important; /* Прозора */
+    border: 2px solid #8A2BE2 !important; /* Фіолетовий контур */
+    color: #fff !important;
+    border-radius: 50px !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all 0.4s ease !important;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ефекти при наведенні на кнопку */
+.hero-btn:hover {
+    background: #8A2BE2 !important; /* Заливається фіолетовим */
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.8); /* Яскраве світіння */
+    transform: translateY(-3px);
+}
+
+/* 4. Плавна поява всієї сторінки (Fade In) */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#content {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* --- СТИЛІ ДЛЯ КАРТОК ТОВАРІВ (коли каталог відкриється) --- */
+.product-card {
+    background: rgba(20, 20, 20, 0.8); /* Темні напівпрозорі картки */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(138, 43, 226, 0.5) !important;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+}
+
+.product-card img {
+    filter: brightness(0.9); /* Трохи приглушити фото */
+}
+
+.product-card .card-title {
+    color: #fff;
+}
+
+.product-card .card-text {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.price-tag {
+    color: #8A2BE2; /* Фіолетова ціна */
+    background: rgba(138, 43, 226, 0.1);
+}
+/* --- СТИЛІ ДЛЯ СПИСКУ КАТЕГОРІЙ (Кіберпанк / Темна тема) --- */
+
+/* 1. Вирівнюємо весь контент по центру екрана */
+#main-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* 1. Вирівнюємо весь контент */
+#main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* ВАЖЛИВО: Замінили center на flex-start, щоб контент починався зверху! */
+    align-items: center;
+    padding-top: 100px; /* Додали більший відступ зверху, щоб кнопка не прилипала до верхнього краю */
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 100vh;
+}
+
+/* 3. Обгортка самого списку */
+.list-group {
+    width: 100%;
+    max-width: 800px; /* Щоб список не був розтягнутий на весь екран */
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Темна тінь навколо списку */
+}
+
+/* 4. Кожен елемент списку (Категорія) */
+.list-group-item {
+    background: rgba(15, 15, 20, 0.75) !important; /* Темний напівпрозорий фон */
+    border: 1px solid rgba(138, 43, 226, 0.2) !important; /* Легка фіолетова рамка */
+    backdrop-filter: blur(10px); /* Ефект скла */
+    color: #ffffff !important;
+    padding: 20px 25px !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+}
+
+/* 5. Ефект при наведенні мишки на категорію */
+.list-group-item:hover {
+    background: rgba(138, 43, 226, 0.3) !important; /* Заливається фіолетовим */
+    border-color: #8A2BE2 !important;
+    transform: scale(1.02); /* Трохи збільшується */
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+}
+
+/* 6. Назви категорій (Смартфони, Планшети тощо) */
+.list-group-item strong, 
+.list-group-item h5 {
+    color: #00c6ff !important; /* Неоновий блакитний для контрасту */
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 7. Опис категорій */
+.list-group-item p {
+    color: rgba(255, 255, 255, 0.6) !important; /* Світло-сірий опис */
+    margin-bottom: 0;
+}
+
+/* 8. Остання категорія "Specials" (Випадкова) */
+.list-group-item-warning {
+    background: linear-gradient(45deg, #4B0082, #8A2BE2) !important; /* Градієнт */
+    color: #ffffff !important;
+    border: none !important;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.list-group-item-warning:hover {
+    filter: brightness(1.2);
+}
+/* --- СТИЛІ ДЛЯ КАРТОК ТОВАРІВ (Темна тема) --- */
+
+/* Загальний вигляд картки */
+.card {
+    background-color: rgba(15, 15, 20, 0.85) !important; /* Темний фон */
+    border: 1px solid rgba(138, 43, 226, 0.3) !important; /* Фіолетова рамка */
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+/* Ефект при наведенні */
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #8A2BE2 !important;
+    box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4);
+}
+
+/* Налаштування картинок, щоб вони не були "скошеними" */
+.card-img-top {
+    height: 220px;
+    object-fit: contain; /* Картинка повністю влазить і не обрізається */
+    padding: 15px;
+    background-color: #ffffff; /* Залишаємо білий фон під самими фото, щоб їх було чітко видно */
+    border-radius: 15px 15px 0 0;
+}
+
+/* Текст у картках */
+.card-title {
+    color: #00c6ff !important; /* Неоновий блакитний заголовок */
+    font-weight: 700;
+}
+
+.card-text {
+    color: #b0b0b0 !important; /* Світло-сірий опис */
+    font-size: 0.95rem;
+}
+
+/* Ціна */
+.card .price {
+    color: #8A2BE2 !important; /* Фіолетова ціна */
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(138, 43, 226, 0.1);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+}
+/* --- СТИЛІ ДЛЯ КАРТОК ТОВАРІВ --- */
+.card {
+    background-color: rgba(15, 15, 20, 0.85) !important;
+    border: 1px solid rgba(138, 43, 226, 0.3) !important;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: contain; /* Забороняє картинкам "скошуватися" або розтягуватися */
+    padding: 15px;
+    background-color: #ffffff; /* Білий фон під фото для контрасту */
+    border-radius: 15px 15px 0 0;
+}
+
+.card-title { color: #00c6ff !important; font-weight: 700; }
+.card-text { color: #b0b0b0 !important; }
+.card .price {
+    color: #8A2BE2 !important;
+    font-weight: bold;
+    background: rgba(138, 43, 226, 0.1);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
