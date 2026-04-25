@@ -5,33 +5,60 @@
       "id": 101,
       "name": "UltraBook Pro",
       "shortname": "ub-pro",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Чудовий вибір для офісу.",
+      "description": "hp elitebook 840 i5 w10/w11 office quamar 14 intel core i5 8 gb / 256 gb срібний",
       "price": "35 000 UAH",
-      "image": "https://placehold.co/200x200/5b5bf0/white?text=Laptop+1"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgj6Iq3sywGoozTOSsuTFt_tXzW4WN9yUr3w&s"
     },
-    {
-      "id": 102,
-      "name": "Gaming Beast X",
-      "shortname": "gb-x",
-      "description": "Lorem ipsum dolor sit amet. Відеокарта RTX 4070.",
-      "price": "60 000 UAH",
-      "image": "https://placehold.co/200x200/a855f7/white?text=Laptop+2"
-    },
+   
     {
       "id": 103,
-      "name": "Student Basic",
-      "shortname": "sb-1",
-      "description": "Lorem ipsum dolor sit amet. Бюджетний варіант.",
-      "price": "15 000 UAH",
-      "image": "https://placehold.co/200x200/22d3a0/white?text=Laptop+3"
+      "name": "MackBook Air Neo 13",
+      "shortname": "mba-neo-13",
+      "description": "13 (2408x1506) Liquid Retina / Apple A18 Pro (4.05 ГГц) / RAM 8 ГБ / SSD 512 ГБ / Apple GPU / Bluetooth, Wi-Fi / macOS / Без ОД / 1.23 кг",
+      "price": " 35 000 UAH",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQMLQ33O4MrPEWkWu5yUmm7C6RxP5k54sVLxXeXdZYx4Mc-gZLNdap3akPkQ8JNw-PI7oky9MvKBZ8oence0S2SeHKxEZrqlkw2CF4Ef00kmKbVOlI_vj5fujtyGCdAmj94MBbOCA&usqp=CAc"
     },
     {
+
       "id": 104,
-      "name": "CodeMaster 15",
-      "shortname": "cm-15",
-      "description": "Lorem ipsum dolor sit amet. Ідеально для програмістів.",
-      "price": "42 000 UAH",
-      "image": "https://placehold.co/200x200/f5c542/black?text=Laptop+4"
+      "name": " Laptop 15 (15-fc0016sl) AMD Ryzen 7 5825U 16GB RAM 512GB SSD",
+      "shortname": "laptop-15-fc0016sl",
+      "description": "Діагональ екрану: 15,6 Модель центрального процесора: Ryzen 5 7520U Об'єм ОЗП: 16 ГБ Об'єм накопичувача: 512 ГБ Модель графічного процесора: Radeon Graphics",
+      "price": "25 000 UAH",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTy3qxSHnO5LdJGdmXKEqRwOV99CxD-LnCIH2LCWYvGi-Z2myCsmXLyciOH9dkzv_9x4P-OMSjp48bwbnMhEH4-Q7mL-A3UIG1N68oJT9M078-FIY2nSgDQYAl1jKZKqsoNZEQjPi69Dw&usqp=CAc"
+    },
+    {
+        "id": 105,
+        "name": "lenovo ideapad slim 3",
+        "shortname": "Ideapad-slim-3",
+        "description": "15.6 IPS (1920x1080) Full HD, матовий / AMD Ryzen 5 7520U (2.8 - 4.3 ГГц) / RAM 16 ГБ / SSD 512 ГБ / AMD Radeon 610M Graphics / без ОС / 1.62 кг",
+        "price": "55 000 UAH",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTy3qxSHnO5LdJGdmXKEqRwOV99CxD-LnCIH2LCWYvGi-Z2myCsmXLyciOH9dkzv_9x4P-OMSjp48bwbnMhEH4-Q7mL-A3UIG1N68oJT9M078-FIY2nSgDQYAl1jKZKqsoNZEQjPi69Dw&usqp=CAc"
+    },
+    {
+        "id": 106,
+        "name": "ASUS Vivobook 17 X1704",
+        "shortname": "vivobook-17-x1704",
+        "description": "Екран 17.3 IPS (1920x1080) Full HD, матовий / Intel Core 5 120U (0.9 - 5.0 ГГц) / RAM 16 ГБ / SSD 512 ГБ / Intel Iris Xe Graphics / без ОД / Wi-Fi / Bluetooth / веб-камера / без ОС / 2.1 кг",
+        "price": "35 000 UAH",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTy3qxSHnO5LdJGdmXKEqRwOV99CxD-LnCIH2LCWYvGi-Z2myCsmXLyciOH9dkzv_9x4P-OMSjp48bwbnMhEH4-Q7mL-A3UIG1N68oJT9M078-FIY2nSgDQYAl1jKZKqsoNZEQjPi69Dw&usqp=CAc"
+    },
+    {
+        "id": 107,
+        "name": "Dell Pro Rugged 14 (210-BNNG_U516512WP) Black",
+        "shortname": "dell-pro-rugged-14",
+        "description": "14 WVA (1920x1080) Full HD, Multi-Touch, глянсовий з покриттям антивідблиску / Intel Core Ultra 5 135U (1.6 - 4.4 ГГц) / RAM 16 ГБ / SSD 512 ГБ / Intel Arc Graphics / Windows 11 Pro / 2.04 кг / 11 годин роботи від батареї / MIL-STD-810H, IP65 / чорний (UKR)",
+        "price": "165 000 UAH",
+        "image": "https://content1.rozetka.com.ua/goods/images/big/623581823.jpg"
+    },
+    {
+        "id": 108,
+        "name": "ASUS Zenbook 14 OLED",
+        "shortname": "zenbook-14-oled",
+        "description": " Intel Core Ultra 7 155H RAM 16GB SSD 1TB 15год батарея Win11 Алюмінієвий корпус (UKR)",
+        "price": "54 000 UAH",
+        "image": "data:image/jpeg;base64,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"
     }
+
   ]
 }
