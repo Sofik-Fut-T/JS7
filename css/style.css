@@ -30,7 +30,7 @@ body {
     height: calc(100vh - 56px); /* На всю висоту екрана, мінус висота меню */
     
     /* Шлях до вашої картинки. Переконайтеся, що він правильний! */
-    background-image: url('../images/laptop-hero.jpg'); /* Замініть на вашу картинку */
+    background-image: url('../laptop-hero.jpg'); /* Замініть на вашу картинку */
     
     background-size: cover; /* Розтягнути на всю площу */
     background-position: center; /* Центрувати */
