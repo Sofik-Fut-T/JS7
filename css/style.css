@@ -1,4 +1,4 @@
-/* --- ГЛОБАЛЬНІ СТИЛІ (Темна тема) --- */
+
 body {
     background-color: #000; /* Фон всього сайту тепер чорний */
     color: #fff; /* Текст за замовчуванням білий */
@@ -27,23 +27,22 @@ body {
 .hero-section {
     position: relative;
     width: 100%;
-    height: calc(100vh - 56px); /* На всю висоту екрана, мінус висота меню */
+    height: calc(100vh - 56px); 
     
-    /* Шлях до вашої картинки. Переконайтеся, що він правильний! */
-    background-image: url('../laptop-hero.jpg'); /* Замініть на вашу картинку */
+    background-image: url('../laptop-hero.jpg'); 
     
-    background-size: cover; /* Розтягнути на всю площу */
-    background-position: center; /* Центрувати */
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
     display: flex;
-    align-items: flex-end; /* Переміщуємо кнопку вниз */
-    padding-bottom: 10vh; /* Відступ від низу екрана */
+    align-items: flex-end; 
+    padding-bottom: 10vh; 
 }
 
-/* 3. Кнопка "Відкрити каталог" (перероблена під нову тему) */
+/* 3. Кнопка "Відкрити каталог" */
 .hero-btn {
-    background: transparent !important; /* Прозора */
-    border: 2px solid #8A2BE2 !important; /* Фіолетовий контур */
+    background: transparent !important; 
+    border: 2px solid #8A2BE2 !important; 
     color: #fff !important;
     border-radius: 50px !important;
     text-transform: uppercase;
@@ -57,8 +56,8 @@ body {
 
 /* Ефекти при наведенні на кнопку */
 .hero-btn:hover {
-    background: #8A2BE2 !important; /* Заливається фіолетовим */
-    box-shadow: 0 0 30px rgba(138, 43, 226, 0.8); /* Яскраве світіння */
+    background: #8A2BE2 !important; 
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.8);
     transform: translateY(-3px);
 }
 
@@ -72,9 +71,9 @@ body {
     animation: fadeInUp 1s ease-out;
 }
 
-/* --- СТИЛІ ДЛЯ КАРТОК ТОВАРІВ (коли каталог відкриється) --- */
+/* --- СТИЛІ ДЛЯ КАРТОК ТОВАРІВ  --- */
 .product-card {
-    background: rgba(20, 20, 20, 0.8); /* Темні напівпрозорі картки */
+    background: rgba(20, 20, 20, 0.8); 
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -104,7 +103,7 @@ body {
 }
 /* --- СТИЛІ ДЛЯ СПИСКУ КАТЕГОРІЙ (Кіберпанк / Темна тема) --- */
 
-/* 1. Вирівнюємо весь контент по центру екрана */
+
 #main-content {
     flex-direction: column;
     justify-content: center;
@@ -116,9 +115,9 @@ body {
 #main-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* ВАЖЛИВО: Замінили center на flex-start, щоб контент починався зверху! */
+    justify-content: flex-start; 
     align-items: center;
-    padding-top: 100px; /* Додали більший відступ зверху, щоб кнопка не прилипала до верхнього краю */
+    padding-top: 100px; 
     padding-bottom: 50px;
     padding-left: 20px;
     padding-right: 20px;
@@ -128,16 +127,16 @@ body {
 /* 3. Обгортка самого списку */
 .list-group {
     width: 100%;
-    max-width: 800px; /* Щоб список не був розтягнутий на весь екран */
+    max-width: 800px; 
     margin: 0 auto;
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Темна тінь навколо списку */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); 
 }
 
 /* 4. Кожен елемент списку (Категорія) */
 .list-group-item {
-    background: rgba(15, 15, 20, 0.75) !important; /* Темний напівпрозорий фон */
-    border: 1px solid rgba(138, 43, 226, 0.2) !important; /* Легка фіолетова рамка */
+    background: rgba(15, 15, 20, 0.75) !important;
+    border: 1px solid rgba(138, 43, 226, 0.2) !important; 
     backdrop-filter: blur(10px); /* Ефект скла */
     color: #ffffff !important;
     padding: 20px 25px !important;
@@ -147,9 +146,9 @@ body {
 
 /* 5. Ефект при наведенні мишки на категорію */
 .list-group-item:hover {
-    background: rgba(138, 43, 226, 0.3) !important; /* Заливається фіолетовим */
+    background: rgba(138, 43, 226, 0.3) !important;
     border-color: #8A2BE2 !important;
-    transform: scale(1.02); /* Трохи збільшується */
+    transform: scale(1.02); 
     z-index: 10;
     box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
 }
@@ -157,7 +156,7 @@ body {
 /* 6. Назви категорій (Смартфони, Планшети тощо) */
 .list-group-item strong, 
 .list-group-item h5 {
-    color: #00c6ff !important; /* Неоновий блакитний для контрасту */
+    color: #00c6ff !important; 
     font-size: 1.3rem;
     display: block;
     margin-bottom: 5px;
@@ -171,7 +170,7 @@ body {
 
 /* 8. Остання категорія "Specials" (Випадкова) */
 .list-group-item-warning {
-    background: linear-gradient(45deg, #4B0082, #8A2BE2) !important; /* Градієнт */
+    background: linear-gradient(45deg, #4B0082, #8A2BE2) !important;
     color: #ffffff !important;
     border: none !important;
     text-align: center;
@@ -186,8 +185,8 @@ body {
 
 /* Загальний вигляд картки */
 .card {
-    background-color: rgba(15, 15, 20, 0.85) !important; /* Темний фон */
-    border: 1px solid rgba(138, 43, 226, 0.3) !important; /* Фіолетова рамка */
+    background-color: rgba(15, 15, 20, 0.85) !important; 
+    border: 1px solid rgba(138, 43, 226, 0.3) !important; 
     border-radius: 15px;
     height: 100%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
@@ -204,26 +203,26 @@ body {
 /* Налаштування картинок, щоб вони не були "скошеними" */
 .card-img-top {
     height: 220px;
-    object-fit: contain; /* Картинка повністю влазить і не обрізається */
+    object-fit: contain; 
     padding: 15px;
-    background-color: #ffffff; /* Залишаємо білий фон під самими фото, щоб їх було чітко видно */
+    background-color: #ffffff; 
     border-radius: 15px 15px 0 0;
 }
 
 /* Текст у картках */
 .card-title {
-    color: #00c6ff !important; /* Неоновий блакитний заголовок */
+    color: #00c6ff !important; 
     font-weight: 700;
 }
 
 .card-text {
-    color: #b0b0b0 !important; /* Світло-сірий опис */
+    color: #b0b0b0 !important; 
     font-size: 0.95rem;
 }
 
 /* Ціна */
 .card .price {
-    color: #8A2BE2 !important; /* Фіолетова ціна */
+    color: #8A2BE2 !important; 
     font-size: 1.2rem;
     font-weight: bold;
     background: rgba(138, 43, 226, 0.1);
@@ -242,7 +241,7 @@ body {
 
 .card-img-top {
     height: 220px;
-    object-fit: contain; /* Забороняє картинкам "скошуватися" або розтягуватися */
+    object-fit: contain; 
     padding: 15px;
     background-color: #ffffff; /* Білий фон під фото для контрасту */
     border-radius: 15px 15px 0 0;
